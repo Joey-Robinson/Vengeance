@@ -1,0 +1,37 @@
+{
+  "name": "lets-see",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass src/scss/main.scss css/main.css -w",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development && node-sass src/scss/main.scss css/main.css -w",
+    "compress:sass": "node-sass --output-style compressed -o /css src/scss/main.scss",
+    "compile:sass": "node-sass src/scss/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.0.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "node-sass": "^4.9.2",
+    "postcss-cli": "^6.0.0",
+    "react-hot-loader": "^4.3.3",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0"
+  }
+}
