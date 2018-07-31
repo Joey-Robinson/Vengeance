@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --config ./webpack.config.js --mode development && node-sass src/scss/main.scss css/main.css -w",
     "compress:sass": "node-sass --output-style compressed -o /css src/scss/main.scss",
     "compile:sass": "node-sass src/scss/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css"
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
+    "build:prod": "webpack -p --env production"
   },
   "keywords": [],
   "author": "",
