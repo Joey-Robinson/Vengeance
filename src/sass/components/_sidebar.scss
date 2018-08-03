@@ -1,0 +1,49 @@
+// Container Div. This holds the button. Made a grid so the button is centered.
+.MenuContainer {
+  width: 15rem;
+  height: 15rem;
+}
+
+// Button for the sidebar. 
+#menuButton {
+  background-color: red;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  outline: none;
+  transition: all .2s ease-in-out;
+}
+ 
+#menuButton:hover {
+  background-color: red;
+  cursor: pointer;
+  border: none;
+  transform: scale(1.2, 1.2);
+}
+ 
+#menuButton:active {
+  border: none;
+  background-color: red;
+}
+
+// The Menu itself. 
+#flyoutMenu {
+  width: 12.2vw;
+  height: 100%;
+  background: #383030;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: transform .3s cubic-bezier(0, .52, 0, 1);
+  z-index: 10;
+}
+// Can use this to alternate left or right.
+#flyoutMenu.hide {
+  transform: translate3d(100vw, 0, 0);
+}
+ 
+#flyoutMenu.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
