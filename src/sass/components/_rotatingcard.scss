@@ -1,0 +1,48 @@
+.RotatingCard {
+  -moz-perspective: 150rem;
+  perspective: 150rem;
+  position: relative;
+  width: 101.7%;
+  grid-column: 1 / span 2;
+  @include respond(tabLand) {
+    height: 100%;
+  }
+  &-Side {
+    background-image: url('https://s3-us-west-2.amazonaws.com/sscstaticsitejr/ssc034.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 2.2rem;
+    color: white;
+    height: 100%;
+    width: 100%;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
+  }
+  &-Side-Front {
+    height: 100%;
+    width: 100%;
+  }
+  &-Side-Back {
+    transform: rotateY(180deg);
+    width: 100%;
+    &-1 {
+      background-image: url('https://s3-us-west-2.amazonaws.com/sscstaticsitejr/ssc033.jpg');
+      background-position: center;
+      background-size: 40rem 30rem;
+      background-repeat: no-repeat;
+    }
+  }
+  &:hover &-Side-Front {
+    transition: all .8s ease;
+    transform: rotateY(-180deg);
+  }
+  &:hover &-Side-Back {
+    transform: rotateY(0);
+  }
+}
