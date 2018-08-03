@@ -18,3 +18,8 @@ if I wanted.
 # Modal
 
 It's a modal. It does modal things. It creates a popup when you click a button. 
+
+
+# Note: 
+
+I might also include some kind of layouts using grid, I'm undecided.
