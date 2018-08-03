@@ -1,3 +1,29 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
 body {
+  font-family: 'IBM Plex Serif', serif;
   background: #222;
-  color: white; }
+  color: white;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.Primary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr); }
+  .Primary-One {
+    background: orangered;
+    grid-column: 2 / span 3;
+    grid-row: 2; }
+    .Primary-One h1 {
+      text-align: center;
+      font-size: 2rem; }
