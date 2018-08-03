@@ -1,0 +1,34 @@
+.Modal {
+  background: rgb(35, 41, 48);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 50%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
+  &-Div {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.Backdrop {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  // top: 12.5rem;
+  // left: 25rem;
+  z-index: 4;
+  background: rgba(0, 0, 0, .45);
+  &:active {
+    grid-column: 1 / span -1;
+    grid-row: 1 / span -1;
+  }
+}

@@ -16,6 +16,79 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+a {
+  text-decoration: none;
+  color: white; }
+
+.Modal {
+  background: #232930;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 50%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%); }
+  .Modal-Div {
+    grid-column: 3;
+    grid-row: 1; }
+
+.Backdrop {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.45); }
+  .Backdrop:active {
+    grid-column: 1 / span -1;
+    grid-row: 1 / span -1; }
+
+.MenuContainer {
+  width: 15rem;
+  height: 15rem; }
+
+#menuButton {
+  background-color: red;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  outline: none;
+  transition: all .2s ease-in-out; }
+
+#menuButton:hover {
+  background-color: red;
+  cursor: pointer;
+  border: none;
+  transform: scale(1.2, 1.2); }
+
+#menuButton:active {
+  border: none;
+  background-color: red; }
+
+#flyoutMenu {
+  width: 12.2vw;
+  height: 100%;
+  background: #383030;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  z-index: 10; }
+
+#flyoutMenu.hide {
+  transform: translate3d(100vw, 0, 0); }
+
+#flyoutMenu.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden; }
+
 .Primary {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
